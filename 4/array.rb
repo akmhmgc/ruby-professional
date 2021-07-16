@@ -12,3 +12,11 @@ list.delete_if do |n|
   n.odd?
 end
 p list
+
+# 配列だけではなくハッシュでも利用可能 とりあえずeachで処理していたかも
+dict = { one: 1, two: 2, three: 3 }
+dict.delete_if do |_k, v|
+  v.odd?
+end
+
+p dict
