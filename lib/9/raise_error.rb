@@ -9,10 +9,3 @@ def currency_of(country)
     raise ArgumentError, "無効な国名です。#{country}"
   end
 end
-
-begin
-  currency_of(:yamataikoku)
-rescue StandardError => e
-  p e.class
-  p e.message
-end

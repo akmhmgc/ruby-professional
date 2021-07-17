@@ -6,4 +6,3 @@ p a.equal?(b)
 
 a.upcase!
 p b #HELLO
-

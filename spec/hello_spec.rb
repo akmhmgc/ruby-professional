@@ -1,7 +1,7 @@
-require_relative '../lib/hello'
+require "spec_helper"
 
-RSpec.describe Hello do
+RSpec.describe "関数のテスト" do
   it "message return hello" do
-    expect(greeting).to eq "hello"
+    expect(hello).to eq "hello"
   end
 end
