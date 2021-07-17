@@ -19,4 +19,22 @@ dict.delete_if do |_k, v|
   v.odd?
 end
 
-p dict
+def mutable
+  # 配列のデフォルト作成
+  # Integerクラスはいミュータブル（変更可能でない）で
+  array = Array.new(10, 2)
+
+  # この時新しい数値が代入されるので参照するオブジェクトidは異なる
+  array[0] = 100
+  p array[0].object_id
+
+  st_array = Array.new(5, "small")
+  # Stringはミュータブル（変更可能）であるため、破壊的メソッドにより変更されると配列の他の値も異なる
+  st_array[0].upcase!
+  p st_array
+
+  # これだと変更されない
+  st_array2 = Array.new(5, "small")
+  st_array2[0] = st_array2[0].upcase
+  p st_array2
+end
