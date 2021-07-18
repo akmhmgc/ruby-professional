@@ -98,5 +98,5 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 
   # lib以下の*.rbファイルを全て取り出して reqireする
-  Dir[File.join(File.dirname(__FILE__), "../lib/**/*.rb")].each { |f| require f }
+  Dir[File.join(File.dirname(__FILE__), "../lib/problems/*.rb")].each { |f| require f }
 end
