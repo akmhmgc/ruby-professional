@@ -18,3 +18,7 @@
 #     end
 #   end
 # end
+
+
+# {:name => :taro}は{name: :taro}と同様の意味を持つ
+#  {test:"bur"} == {"test":"bur"} true
