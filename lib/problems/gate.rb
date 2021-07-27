@@ -14,13 +14,15 @@ class Gate
     ticket.stamped(@gate)
   end
 
-  def fee(from, to)
-    distance = GATES.index(to) - GATES.index(from)
-    FEES[distance - 1]
+  def exit(ticket)
+    ticket.fare >= calc_fee(ticket.stamped_at, gate)
   end
 
-  def exit(ticket)
-    ticket.fare >= fee(ticket.stamped_at, gate)
+  private
+
+  def calc_fee(from, to)
+    distance = GATES.index(to) - GATES.index(from)
+    FEES[distance - 1]
   end
 end
 
