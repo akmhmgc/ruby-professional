@@ -1,4 +1,4 @@
 example_id                         | status | run_time        |
 ---------------------------------- | ------ | --------------- |
-./spec/convert_length_spec.rb[1:1] | passed | 0.00075 seconds |
-./spec/hello_spec.rb[1:1]          | passed | 0.00047 seconds |
+./spec/convert_length_spec.rb[1:1] | failed | 0.00009 seconds |
+./spec/hello_spec.rb[1:1]          | passed | 0.00053 seconds |
