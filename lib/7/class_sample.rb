@@ -5,6 +5,11 @@ class Product
     @name = name
     @price = price
   end
+
+  def introduce
+    "name: #{name}, price: #{price}"
+  end
+
 end
 
 class DVD < Product
@@ -16,8 +21,11 @@ class DVD < Product
   end
 
   def introduce
-    "name: #{name}, price: #{price} label: #{label}"
+    # 親クラスのインスタンス同名のインスタンスメソッドを呼び出し可能
+    "#{super} label: #{label}"
   end
 end
 
 dvd = DVD.new("百円の恋", 100, "東宝シネマズ")
+
+p dvd.introduce
