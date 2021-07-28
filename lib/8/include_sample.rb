@@ -5,11 +5,19 @@ module Greeting
 end
 
 class User
+  # この中でputsが使えるのはどういうこと？
+  # pはUser
+  p "テスト"
   include Greeting
 end
 
-user = User.new
-
-p User.included_modules
+# p User.included_modules
 
 # pryにおいてselfはObjectクラスのインスタンスである
+
+
+# UseクラスはClassクラスのインスタンスである
+p User.is_a?(Class)
+
+# ClassクラスはKernelモジュールをincludeしている
+p Class.included_modules
