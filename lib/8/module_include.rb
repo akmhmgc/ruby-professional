@@ -23,3 +23,4 @@ p Class.is_a?(Object)
 # classメソッドは自身が属するクラスを返す
 p child.class
 
+
