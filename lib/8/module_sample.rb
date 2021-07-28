@@ -1,12 +1,17 @@
-module Greeting
-  def hello
-    p "こんちゃす"
+class User
+  include Comparable
+  attr_reader :size
+
+  def initialize(size)
+    @size = size
+  end
+
+  def <=>(other)
+    size <=> other.size if other.is_a?(User)
   end
 end
 
-class User
-  extend Greeting
+user1 = User.new(150)
+user2 = User.new(220)
 
-  # extendだと特異メソッドなのでクラス作成時に呼び出し可能
-  hello
-end
+p user1 < user2
