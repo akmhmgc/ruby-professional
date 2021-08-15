@@ -10,6 +10,9 @@ class Product
     "name: #{name}, price: #{price}"
   end
 
+  def nedan
+    "this is #{price}"
+  end
 end
 
 class DVD < Product
@@ -26,6 +29,5 @@ class DVD < Product
   end
 end
 
-dvd = DVD.new("百円の恋", 100, "東宝シネマズ")
-
-p dvd.introduce
+dvd = DVD.new("パイレーツオブカリビアン", 2000, "東映")
+puts dvd.nedan
