@@ -1,13 +1,18 @@
-def greeting
-  p "おはよう"
-#    ブロックの引数に渡す
-  test = yield "ういす"
-  p test
-  p "こんばんわ"
+def greeting(lang: nil)
+  if lang == "ja"
+    p "こんにちは"
+  elsif lang == "en"
+    p "hello"
+  else
+    p "?????"
+  end
 end
 
-greeting do |test|
-    test * 10
+def greet_log
+  lg = yield
+  greeting(lang: lg)
 end
 
-
+greet_log do |_lang|
+  "ja"
+end
