@@ -1,18 +1,14 @@
-def greeting(lang: nil)
-  if lang == "ja"
-    p "こんにちは"
-  elsif lang == "en"
-    p "hello"
-  else
-    p "?????"
-  end
+class User
+  attr_accessor :name
 end
 
-def greet_log
-  lg = yield
-  greeting(lang: lg)
+def create
+  #  yieldでブロックないの動作が実行される
+  # yieldに渡した引数はブロック実行時の変数に代入される
+  yield  user = User.new
+  p "#{user.name}が生まれました"
 end
 
-greet_log do |_lang|
-  "ja"
+create do |u|
+  u.name = "たけし"
 end
