@@ -31,3 +31,4 @@ end
 
 dvd = DVD.new("パイレーツオブカリビアン", 2000, "東映")
 puts dvd.nedan
+
