@@ -8,6 +8,7 @@ module M
 end
 
 class C
+  # 通常モジュールはincludeして使用される
   include M
 
   #   プライベートメソッドの呼び出し
